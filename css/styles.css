@@ -1,0 +1,100 @@
+:root {
+  --primary-text-color: #757575;
+  --titel-text-color: #212121;
+  --accent-text-color: #2196f3;
+  --white-text-color: #ffffff;
+  --white-footer-text-color: rgba (255, 255, 255, 0.6);
+  --logo-color: #000000;
+  --primary-background-color: #e5e5e5;
+  --background-color: #2f303a;
+  --background-color-two: #ffffff;
+}
+/* Body */
+.page {
+  background-color: var(--primary-background-color);
+  color: var(--titel-text-color);
+  font-family: Roboto;
+  letter-spacing: 0.03em;
+  position: absolute;
+}
+
+/* Footer */
+.footer {
+  background-color: var(--background-color);
+  color: var(--white-text-color);
+}
+
+.list {
+  list-style: none;
+}
+
+/* Header */
+.header {
+  background: var(--background-color-two);
+}
+
+.logo {
+  font-family: Raleway;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+
+  color: var(--accent-text-color);
+}
+
+.studio {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+
+  color: var(--titel-text-color);
+}
+
+.portfolio {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+
+  color: var(--titel-text-color);
+}
+
+.contacts {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+
+  color: var(--titel-text-color);
+}
+
+.email {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+
+  color: var(--primary-text-color);
+}
+
+.telefon {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+
+  color: var(--primary-text-color);
+}
+
+.link:hover,
+.link:focus {
+  color: var(--accent-text-color);
+}
+
+/* Hero */
+.button {
+  background-color: var(--accent-text-color);
+  color: var(--white-text-color);
+}
