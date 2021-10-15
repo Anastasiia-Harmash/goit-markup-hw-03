@@ -10,6 +10,7 @@
   --background-color: #2f303a;
   --background-color-two: #ffffff;
   --background-command: #f5f4fa;
+  --border-color: rgba(238, 238, 238, 1);
 }
 
 /* Остальной код */
@@ -284,6 +285,7 @@ p {
 
 .item-aside {
   width: 270px;
+  /* width: calc((100% - 3 * 30) / 4); */
 }
 
 .aside .item-aside:not(:last-child) {
