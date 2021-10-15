@@ -2,51 +2,161 @@
   --primary-text-color: #757575;
   --titel-text-color: #212121;
   --accent-text-color: #2196f3;
-  --white-text-color: #ffffff;
+  --white-logo-color: #ffffff;
+  --white-color: #ffffff;
   --white-footer-text-color: rgba (255, 255, 255, 0.6);
   --logo-color: #000000;
   --primary-background-color: #e5e5e5;
   --background-color: #2f303a;
   --background-color-two: #ffffff;
-}
-/* Body */
-.page {
-  background-color: var(--primary-background-color);
-  color: var(--titel-text-color);
-  font-family: Roboto;
-  letter-spacing: 0.03em;
-  position: absolute;
+  --background-command: #f5f4fa;
 }
 
-/* Footer */
-.footer {
-  background-color: var(--background-color);
-  color: var(--white-text-color);
+/* Остальной код */
+
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 
+/* Утилит */
 .list {
+  padding: 0px;
+  margin: 0px;
   list-style: none;
+  text-decoration: none;
 }
 
-/* Header */
-.header {
-  background: var(--background-color-two);
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 
+/* Link  |  Cursor | Flex */
+
+.link:hover,
+.link:focus,
+.link:active {
+  color: var(--accent-text-color);
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+/* Body */
+.body {
+  font-family: Roboto, sans-serif;
+  letter-spacing: 0.03em;
+
+  background-color: var(--background-color-two);
+  color: var(--titel-text-color);
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1230px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Logo */
 .logo {
+  display: block;
+  margin: 0;
+
   font-family: Raleway;
-  font-weight: bold;
+  font-weight: 900;
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
 
+  list-style: none;
+  text-decoration: none;
+
+  color: var(--logo-color);
+}
+
+.logo-accent {
+  font-family: Raleway;
+  font-weight: 900;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  list-style: none;
+
   color: var(--accent-text-color);
 }
+
+/* Header */
+
+.header {
+  display: flex;
+  background-color: var(--background-color-two);
+}
+
+/* Main-nav  */
+
+.main-nav {
+  display: flex;
+  align-items: center;
+}
+
+/* Site-nav */
+
+.site-nav {
+  display: flex;
+}
+
+.site-nav > .logo {
+  display: block;
+  padding-top: 24px;
+  padding-bottom: 25px;
+  padding-right: 90px;
+  margin-right: 93px;
+}
+
+.item {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.site-nav .item:not(:last-child) {
+  margin-right: 50px;
+}
+
+/* Auth-nav  */
+.auth-nav {
+  display: flex;
+  margin-left: auto;
+}
+
+.auth-nav .item + .item {
+  margin-left: 50px;
+}
+
+/* продолжение Header */
 
 .studio {
   font-weight: 500;
   font-size: 14px;
-  line-height: 1.4;
+  line-height: 1.14;
   letter-spacing: 0.02em;
 
   color: var(--titel-text-color);
@@ -55,7 +165,7 @@
 .portfolio {
   font-weight: 500;
   font-size: 14px;
-  line-height: 1.4;
+  line-height: 1.14;
   letter-spacing: 0.02em;
 
   color: var(--titel-text-color);
@@ -64,7 +174,7 @@
 .contacts {
   font-weight: 500;
   font-size: 14px;
-  line-height: 1.4;
+  line-height: 1.14;
   letter-spacing: 0.02em;
 
   color: var(--titel-text-color);
@@ -73,7 +183,7 @@
 .email {
   font-weight: 500;
   font-size: 14px;
-  line-height: 1.4;
+  line-height: 1.14;
   letter-spacing: 0.02em;
 
   color: var(--primary-text-color);
@@ -82,19 +192,292 @@
 .telefon {
   font-weight: 500;
   font-size: 14px;
-  line-height: 1.4;
+  line-height: 1.14;
   letter-spacing: 0.02em;
 
   color: var(--primary-text-color);
 }
 
-.link:hover,
-.link:focus {
+.current {
   color: var(--accent-text-color);
 }
 
 /* Hero */
-.button {
-  background-color: var(--accent-text-color);
-  color: var(--white-text-color);
+.hero {
+  padding-top: 200px;
+  padding-bottom: 200px;
+  text-align: center;
+
+  background-color: var(--background-color);
 }
+
+.hero-titel {
+  margin-top: 0px;
+  margin-bottom: 30px;
+  padding-left: 140px;
+  padding-right: 140px;
+
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+
+  color: var(--white-color);
+  /* outline: 2px solid tomato; */
+}
+
+/* Button */
+
+.button {
+  display: inline-block;
+  margin: 0px;
+  border-radius: 4px;
+  border: 0px solid transparent;
+  padding: 11px 34px;
+  min-width: 70px;
+  text-align: center;
+
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1.2;
+  text-decoration: none;
+
+  color: var(--white-color);
+  background-color: var(--accent-text-color);
+}
+
+.button.secondary {
+  color: var(--titel-text-color);
+  background-color: var(--background-command);
+}
+
+.secondary:hover,
+.secondary:focus,
+.secondary:active {
+  color: var(--white-color);
+  background-color: var(--accent-text-color);
+
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+}
+
+/* Content  */
+
+.content {
+  background-color: var(--background-color-two);
+}
+
+.aside {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 94px;
+  padding-bottom: 94px;
+
+  font-size: 14px;
+  line-height: 1.71;
+
+  letter-spacing: 0.03em;
+}
+
+.item-aside {
+  width: 270px;
+}
+
+.aside .item-aside:not(:last-child) {
+  margin-right: 30px;
+}
+
+.subtitle {
+  padding-bottom: 10px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: var(--titel-text-color);
+}
+
+.subtitle-text {
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+
+  color: var(--primary-text-color);
+}
+
+/* Чем мы занимаемся */
+
+.titel {
+  padding: 0px;
+  padding-bottom: 50px;
+
+  font-weight: 900;
+  font-size: 36px;
+  line-height: 42px;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: var(--titel-text-color);
+}
+
+.img-list {
+  display: flex;
+  justify-content: space-evenly;
+  padding-bottom: 94px;
+}
+
+.img-list .img:not(:last-child) {
+  padding-right: 30px;
+}
+
+/* Command */
+
+.command {
+  background-color: var(--background-command);
+}
+
+.titel-avatar {
+  padding-top: 94px;
+  padding-bottom: 50px;
+}
+
+.list-avatar {
+  display: flex;
+  justify-content: space-evenly;
+  padding-bottom: 94px;
+}
+
+.list-avatar .avatar:not(:last-child) {
+  margin-right: 30px;
+}
+
+.avatar {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.headline {
+  padding-top: 30px;
+
+  text-align: center;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.18;
+  letter-spacing: 0.03em;
+
+  color: var(--titel-text-color);
+}
+
+.desc {
+  padding-top: 10px;
+  padding-bottom: 30px;
+
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.18;
+  letter-spacing: 0.03em;
+
+  color: var(--primary-text-color);
+}
+
+/* Footer */
+
+.footer-nav {
+  display: block;
+
+  font-family: Roboto, sans-serif;
+  letter-spacing: 0.03em;
+
+  background-color: var(--background-color);
+  color: var(--white-logo-color);
+}
+
+.footer {
+  display: block;
+  padding: 0px;
+  padding-top: 66px;
+}
+
+.test {
+  display: flex;
+  padding: 0px;
+  padding-bottom: 20px;
+}
+
+.logo-footer {
+  font-style: normal;
+  font-family: Raleway;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+
+  color: var(--white-logo-color);
+}
+
+.footer-list {
+  padding-bottom: 54px;
+}
+
+.footer-list > li:not(:last-child) {
+  padding-bottom: 9px;
+}
+
+.logo-accent-footer {
+  font-style: normal;
+  color: var(--accent-text-color);
+}
+
+.address-footer {
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+
+  color: var(--white-logo-color);
+}
+
+.email-footer {
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.telefon-footer {
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Section */
+
+.section-titel {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+
+  color: var(--titel-text-color);
+}
+
+.section-text {
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.03em;
+
+  color: var(--primary-text-color);
+}
+
+/* PAGE PORTFOLIO */
