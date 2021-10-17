@@ -27,21 +27,27 @@
         <div class="main-nav container">
 
             <nav class="site-nav">
-                <a class=" logo" href=""><span class="logo-accent">Web</span>Studio</a>
+                <a class="logo" href=""><span class="logo-accent">Web</span>Studio</a>
 
-                <ul class="site-nav list">
-                    <li class="item"><a class="studio link list cursor current" href="">Студия</a></li>
-                    <li class="item"><a class="portfolio link list cursor" href="./portfolio.html">Портфолио</a></li>
-                    <li class="item"><a class="contacts link list cursor" href="">Контакты</a></li>
+                <ul class="site-nav">
+                    <li class="site-nav-item">
+                        <a class="site-nav-link current" href="./index.html">Студия</a>
+                    </li>
+                    <li class="site-nav-item">
+                        <a class="site-nav-link  cursor" href="portfolio.html">Портфолио</a>
+                    </li>
+                    <li class="site-nav-item">
+                        <a class="site-nav-link cursor" href="">Контакты</a>
+                    </li>
                 </ul>
             </nav>
 
-            <ul class="auth-nav list">
-                <li class="item">
-                    <a class="email link list cursor" href="mailto:info@devstudio.com">info@devstudio.com</a>
+            <ul class="auth-nav">
+                <li class="auth-nav-item">
+                    <a class="auth-nav-link" href="mailto:info@devstudio.com">info@devstudio.com</a>
                 </li>
-                <li class="item">
-                    <a class="telefon link list cursor" href="tel:+380961111111">+38 096 111 11 11</a>
+                <li class="auth-nav-item">
+                    <a class="auth-nav-link" href="tel:+380961111111">+38 096 111 11 11</a>
                 </li>
             </ul>
 
@@ -54,34 +60,34 @@
         <section class="hero">
             <div class="container">
                 <h1 class="hero-titel">Эффективные решения для вашего бизнеса</h1>
-                <button class="button cursor" type="button list">Заказать услугу</button>
+                <button class="button" type="button">Заказать услугу</button>
         </section>
 
         <!-- Особенности -->
 
-        <section class="content">
+        <section class="section">
             <div class="container">
-                <h2 class="">Особенности</h2>
+                <h2 class="hidden">Особенности</h2>
 
-                <ul class="aside  list">
-                    <li class="item-aside">
-                        <h3 class="subtitle">Внимание к деталям</h3>
-                        <p class="subtitle-text">Идейные соображения, а также начало повседневной работы по
+                <ul class="features">
+                    <li class="features-item">
+                        <h3 class="features-titel">Внимание к деталям</h3>
+                        <p class="features-text">Идейные соображения, а также начало повседневной работы по
                             формированию позиции.</p>
                     </li>
-                    <li class="item-aside">
-                        <h3 class="subtitle">Пунктуальность</h3>
-                        <p class="subtitle-text">Задача организации, в особенности же рамки и место обучения кадров
+                    <li class="features-item">
+                        <h3 class="features-titel">Пунктуальность</h3>
+                        <p class="features-text">Задача организации, в особенности же рамки и место обучения кадров
                             влечет за собой.</p>
                     </li>
-                    <li class="item-aside">
-                        <h3 class="subtitle">Планирование</h3>
-                        <p class="subtitle-text">Равным образом консультация с широким активом в значительной степени
+                    <li class="features-item">
+                        <h3 class="features-titel">Планирование</h3>
+                        <p class="features-text">Равным образом консультация с широким активом в значительной степени
                             обуславливает.</p>
                     </li>
-                    <li class="item-aside">
-                        <h3 class="subtitle">Современные технологии</h3>
-                        <p class="subtitle-text">Значимость этих проблем настолько очевидна, что реализация плановых
+                    <li class="features-item">
+                        <h3 class="features-titel">Современные технологии</h3>
+                        <p class="features-text">Значимость этих проблем настолько очевидна, что реализация плановых
                             заданий.</p>
                     </li>
                 </ul>
@@ -91,17 +97,17 @@
 
         <!-- Примеры работ -->
 
-        <section class="content">
+        <section class="section works-section">
             <div class="container">
-                <h2 class="titel">Чем мы занимаемся</h2>
-                <ul class="img-list list">
-                    <li class="img">
+                <h2 class="works-titel">Чем мы занимаемся</h2>
+                <ul class="works-list">
+                    <li class="works-img">
                         <img src="./images/box1.jpg" alt="работа за планшетом" width="370" height="294" />
                     </li>
-                    <li class="img">
+                    <li class="works-img">
                         <img src="./images/box2.jpg" alt="работа за ноутбуком" width="370" height="294" />
                     </li>
-                    <li class="img">
+                    <li class="works-img">
                         <img src="./images/box3.jpg" alt="планшет в руках" width="370" height="294" />
                     </li>
                 </ul>
@@ -111,29 +117,40 @@
 
         <!-- Команда -->
 
-        <section class="command">
+        <section class="section command-section">
             <div class="container">
-                <h2 class="titel-avatar titel">Наша команда</h2>
-                <ul class="list-avatar list">
-                    <li class="avatar">
+                <h2 class="command-titel works-titel">Наша команда</h2>
+                <ul class="command-list">
+
+                    <li class="command-avatar">
                         <img src="./images/img1.jpg" alt="фотография Игорья Демьяненко" width="270" height="260" />
-                        <h3 class="headline">Игорь Демьяненко</h3>
-                        <p class="desc">Product Designer</p>
+                        <div class="command-box">
+                            <h3 class="command-text">Игорь Демьяненко</h3>
+                            <p class="command-desc">Product Designer</p>
+                        </div>
                     </li>
-                    <li class="avatar">
+
+                    <li class="command-avatar">
                         <img src="./images/img2.jpg" alt="фотография Ольги Репиной" width="270" height="260" />
-                        <h3 class="headline">Ольга Репина</h3>
-                        <p class="desc">Frontend Developer</p>
+                        <div class="command-box">
+                            <h3 class="command-text">Ольга Репина</h3>
+                            <p class="command-desc">Frontend Developer</p>
                     </li>
-                    <li class="avatar">
+
+                    <li class="command-avatar">
                         <img src="./images/img3.jpg" alt="фотография Николая Тарасова" width="270" height="260" />
-                        <h3 class="headline"> Николай Тарасов</h3>
-                        <p class="desc">Marketing</p>
+                        <div class="command-box">
+                            <h3 class="command-text"> Николай Тарасов</h3>
+                            <p class="command-desc">Marketing</p>
+                        </div>
                     </li>
-                    <li class="avatar">
+
+                    <li class="command-avatar">
                         <img src="./images/img4.jpg" alt="фотография Михаил Ермаков" width="270" height="260" />
-                        <h3 class="headline">Михаил Ермаков</h3>
-                        <p class="desc">UI Designer</p>
+                        <div class="command-box">
+                            <h3 class="command-text">Михаил Ермаков</h3>
+                            <p class="command-desc">UI Designer</p>
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -143,23 +160,22 @@
     <!-- Подвал сайта -->
 
     <footer class="footer-nav">
-        <div class="footer container">
+        <div class="container">
 
-            <div class="test">
-                <a class="logo-footer list cursor" href=""><span
-                        class="logo-footer logo-accent-footer cursor">Web</span>Studio</a>
+            <div class="footer-nav-box">
+                <a class="logo-footer" href=""><span class="logo-footer logo-accent-footer">Web</span>Studio</a>
             </div>
 
             <address>
-                <ul class="footer-list list">
+                <ul class="footer-list">
                     <li>
-                        <a class="address-footer link list cursor" href="">г. Киев, пр-т Леси Украинки, 26</a>
+                        <a class="footer-link" href="">г. Киев, пр-т Леси Украинки, 26</a>
                     </li>
                     <li>
-                        <a class="email-footer link list cursor" href="maito:info@example.com">info@example.com</a>
+                        <a class="footer-link" href="maito:info@example.com">info@example.com</a>
                     </li>
                     <li>
-                        <a class="telefon-footer link list cursor" href="tel:+380991111111">+38 099 111 11 11</a>
+                        <a class="footer-link" href="tel:+380991111111">+38 099 111 11 11</a>
                     </li>
                 </ul>
             </address>
@@ -167,4 +183,5 @@
     </footer>
 
 </body>
+
 </html>
